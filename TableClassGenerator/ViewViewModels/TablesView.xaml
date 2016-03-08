@@ -1,0 +1,100 @@
+﻿<uen:BizView x:Class="TableClassGenerator.TablesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uen="clr-namespace:uEN.UI;assembly=uEN"
+        xmlns:controls="clr-namespace:uEN.UI.Controls;assembly=uEN"
+        xmlns:attacher="clr-namespace:uEN.UI.AttachedProperties;assembly=uEN"
+        xmlns:properties="clr-namespace:TableClassGenerator.Properties"
+        mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        d:DesignHeight="300" d:DesignWidth="300"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <controls:MetroProgress Grid.Row="0" Margin="30,5,30,5"
+                                x:Name="WaitProgress"
+                                IsIndeterminate="True"
+                                Minimum="0"
+                                Maximum="100"
+                                />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1.5*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="3,2">
+                    <TextBlock Text="schemas"/>
+                    <ComboBox x:Name="SchemasComboBox"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="3,2">
+                    <TextBlock Text="namespace" />
+                    <TextBox x:Name="NamespaceTextBox" />
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <CheckBox x:Name="AllowDapperAggregatorCheckBox"
+                          Style="{DynamicResource SliderCheckBoxStyle}" 
+                          Margin="15,2" 
+                          Content="{x:Static properties:Resources.AllowDapperAggregator}" 
+                          VerticalContentAlignment="Center"/>
+            </StackPanel>
+            
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="AllSelectButton" Margin="3,2"
+                        attacher:SymbolButtonProxy.Symbol="SelectAll"
+                        attacher:SymbolButtonProxy.Text="{x:Static properties:Resources.AllSelect}"
+                        />
+                <Button x:Name="ClearSelectButton" Margin="10,2"
+                        attacher:SymbolButtonProxy.Symbol="ClearSelection"
+                        attacher:SymbolButtonProxy.Text="{x:Static properties:Resources.ClearSelection}"
+                        />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1"  Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Margin="15,2" 
+                    x:Name="SaveButton"
+                    attacher:SymbolButtonProxy.Symbol="Save"
+                    attacher:SymbolButtonProxy.Text="{x:Static properties:Resources.GenerateAndSave}" />
+            </StackPanel>
+        </Grid>
+
+        <ContentPresenter Grid.Row="3" x:Name="GridContent" Margin="5"/>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="FilterTextBox" Width="250" Margin="3,2" ToolTip="Filter"
+                         attacher:SymbolTextBoxProxy.Symbol="Clear"
+                             />
+                <Button Margin="3,2"
+                        x:Name="FindButton"
+                        attacher:SymbolButtonProxy.Symbol="Find"
+                        attacher:SymbolButtonProxy.Text="{x:Static properties:Resources.Find}"
+                    />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</uen:BizView>
