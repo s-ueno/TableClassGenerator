@@ -12,6 +12,6 @@ For example, if you connect to SQL-Server, type the such as the server name in t
 
 ![PIC_1](http://s-ueno.github.io/images/TableClassGenerator_ConnectionString.PNG)
 
-Please refer to [here](https://msdn.microsoft.com/ja-jp/library/ms254500.aspx) for the connectionStrings.
+Please refer to [here](https://msdn.microsoft.com/library/ms254500.aspx) for the connectionStrings.
 
 
