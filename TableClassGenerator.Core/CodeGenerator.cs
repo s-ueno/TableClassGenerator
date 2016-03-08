@@ -10,7 +10,7 @@ namespace TableClassGenerator.Core
 {
     public abstract class CodeGenerator
     {
-        protected virtual DBSchemaProvider Provider { get; }
+        protected virtual DBSchemaProvider Provider { get { return null; } }
         public virtual string PrecautionaryStatement() { return string.Empty; }
         public virtual IEnumerable<string> Using() { yield break; }
         public abstract string Namespace();
