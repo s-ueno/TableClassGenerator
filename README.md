@@ -27,6 +27,10 @@ These can be readily utilized by utilizing the nuget package.
 
 sample, will be in the configuration file using the Npgsql.  
 
+![PIC_2](http://s-ueno.github.io/images/TableClassGenerator_PostgresProvider.PNG)
+
+
+
 
 
 
