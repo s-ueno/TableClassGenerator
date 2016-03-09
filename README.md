@@ -14,4 +14,11 @@ For example, if you connect to SQL-Server, type the such as the server name in t
 
 Please refer to [here](https://msdn.microsoft.com/library/ms254500.aspx) for the connectionStrings.
 
+Introduce the details of the provider-specific connection string.
+
++[SQL Server](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)
++[OleDb](https://msdn.microsoft.com/library/system.data.oledb.oledbconnection.connectionstring.aspx)
++[Odbc](https://msdn.microsoft.com/library/system.data.odbc.odbcconnection.connectionstring.aspx)
++[OracleClient](https://msdn.microsoft.com/library/system.data.oracleclient.aspx)
+
 
