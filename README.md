@@ -21,4 +21,12 @@ Introduce the details of the provider-specific connection string.
  + [Odbc](https://msdn.microsoft.com/library/system.data.odbc.odbcconnection.connectionstring.aspx)
  + [OracleClient](https://msdn.microsoft.com/library/system.data.oracleclient.aspx)
 
+can connect to any data source by extending the provider.
+[Npgsql](http://www.npgsql.org/) is famous as a library to be connected to the "PostgreSQL".
+These can be readily utilized by utilizing the nuget package.
+sample, will be in the configuration file using the Npgsql.
+
+
+
+
 
